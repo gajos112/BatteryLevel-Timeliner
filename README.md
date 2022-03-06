@@ -22,16 +22,11 @@ The tool accesses and parses data from the table called {FEE4E14F-02A9-4550-B5CE
 - https://github.com/libyal/esedb--kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc.
 
 To give you a quick overview of the database, I listed few useful (for DFIR analysts) tables below.
-
-{DD6636C4-8929-4683-974E-22C046A43763} - Network Connectivity data
-
-{D10CA2FE-6FCF-4F6D-848E-B2E99266FA89} - Application Resource usage data
-
-{973F5D5C-1D90-4944-BE8E-24B94231A174} - Network usage data
-
-{D10CA2FE-6FCF-4F6D-848E-B2E99266FA86} - Windows Push Notification data
-
-{FEE4E14F-02A9-4550-B5CE-5FA2DA202E37} - Energy usage data
+- {DD6636C4-8929-4683-974E-22C046A43763} - Network Connectivity data
+- {D10CA2FE-6FCF-4F6D-848E-B2E99266FA89} - Application Resource usage data
+- {973F5D5C-1D90-4944-BE8E-24B94231A174} - Network usage data 
+- {D10CA2FE-6FCF-4F6D-848E-B2E99266FA86} - Windows Push Notification data
+- {FEE4E14F-02A9-4550-B5CE-5FA2DA202E37} - Energy usage data
 
 # Timeline
 The timeline contains all entires extracted from the database. You can easily review them using BASH and simply GREP what you want to analyze.
