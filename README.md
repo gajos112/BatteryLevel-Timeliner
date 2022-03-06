@@ -1,11 +1,11 @@
-# BatteryPower-Timeliner
+# BatteryLevel-Timeliner
 
-BatteryPower Timeliner was designed and created for all DFIR analysts who want to use SRUM database to find out what was the battery level at the time of infection. There are few tools that can extract that information from SRUDB.DAT, but in my opinion analysts do not understand what information are avaialbe in other tables than {973F5D5C-1D90-4944-BE8E-24B94231A174} (a very popular table, that stores information about network connections) and how that information can help during the investigation. 
+BatteryLevel Timeliner was designed and created for all DFIR analysts who want to use a SRUM database to find out what was a battery level at the time of the infection. There are few tools that can extract that information from SRUDB.DAT, but in my opinion analysts are aware of a table that is called {973F5D5C-1D90-4944-BE8E-24B94231A174} (it is the very popular table, that stores information about network connections), and how that information can help during the investigation. 
 
-BatteryPower - Timeliner does two things:
+BatteryLevel - Timeliner does two things:
 
-- parses srudb.dat and builds a TLN timeline (where each entry shows the current level of the battery),
-- generates a graph showing the use of the battery over a specified period of time.
+- parses srudb.dat and builds a TLN timeline (where each entry shows a timestamp and a battery level),
+- generates a chart showing the use of the battery over a specified period of time.
 
 It is a GUI tool written in C# .Net Framework 4.7.2. In order to access ESE database (the format used by SRUM) I used ManagedEsent version 2.0.3 (older versions do not work properly). Link to it can be found here: https://github.com/microsoft/ManagedEsent. In order to make that executable portable I used Costura.Fody which merges assemblies as embedded resources, therefore you do not have to care about other dependencies.
 
@@ -15,7 +15,7 @@ It was tested on:
 - Windows 10.0.19042.
 
 
-The tool accesses and parses data from the table called {FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}. More information about the SRUM structure can be found under these links:
+The tool accesses and parses data from a table called {FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}. More information about the SRUM structure can be found under these links:
 
 - https://deepsec.net/docs/Slides/2019/Beyond_Windows_Forensics_with_Built-in_Microsoft_Tooling_Thomas_Fischer.pdf,
 - https://velociraptor.velocidex.com/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375,
@@ -67,7 +67,7 @@ If the file you provided is not a valid SRUM db, the tool will throw an error. I
 As you could observe above, each value is stored using a different data type. It's quite important as you have to know which method you will choose to extract that data. I found one article that shows data types for all SRUM's tables: 
 - http://dfir.pro/index.php?link_id=92259,
 
-6. Calculates a percentage value based on the ChargeLevel and FullChargedCapacity. If both values equal zero, it means that batter was not connected.
+6. Calculates a percentage value based on the ChargeLevel and FullChargedCapacity. If both values ​​are zero, it means that the battery was not connected.
 
         if (ChargeLevel == 0 && FullChargedCapacity == 0)
         {
