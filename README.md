@@ -90,7 +90,8 @@ As you could observe above, each value is stored using a different data type. It
             Data.Add(Tuple.Create(Time, procent));
         }
         
-7. Finally builds a CSV file and generates a graph.
+7. Finally, it creates a CSV file and generates a chart.
+![alt text](https://github.com/gajos112/BatteryLevel-Timeliner/blob/main/images/1.png?raw=true)
 
 # Timeline
 The timeline contains all entires extracted from the database. You can easily review them using BASH and simply GREP what you want to analyze.
