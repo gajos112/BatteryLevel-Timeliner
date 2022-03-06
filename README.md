@@ -11,8 +11,10 @@ It is a GUI tool written in C# .Net Framework 4.7.2. In order to access ESE data
 
 It was tested on:
 
-Windows 10.0.16299,
-Windows 10.0.19042.
+- Windows 10.0.16299,
+- Windows 10.0.19042.
+
+
 The tool accesses and parses data from the table called {FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}. More information about the SRUM structure can be found under these links:
 
 - https://deepsec.net/docs/Slides/2019/Beyond_Windows_Forensics_with_Built-in_Microsoft_Tooling_Thomas_Fischer.pdf,
