@@ -18,7 +18,8 @@ It was tested on:
 The tool accesses and parses data from the table called {FEE4E14F-02A9-4550-B5CE-5FA2DA202E37}. More information about the SRUM structure can be found under these links:
 
 - https://deepsec.net/docs/Slides/2019/Beyond_Windows_Forensics_with_Built-in_Microsoft_Tooling_Thomas_Fischer.pdf,
-- https://velociraptor.velocidex.com/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375,https://github.com/libyal/esedb-- kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc.
+- https://velociraptor.velocidex.com/digging-into-the-system-resource-usage-monitor-srum-afbadb1a375,
+- https://github.com/libyal/esedb--kb/blob/main/documentation/System%20Resource%20Usage%20Monitor%20(SRUM).asciidoc.
 
 To give you a quick overview of the database, I listed few useful (for DFIR analysts) tables below.
 
