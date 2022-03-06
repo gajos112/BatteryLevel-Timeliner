@@ -67,6 +67,27 @@ If the file you provided is not a valid SRUM db, the tool will throw an error. I
 As you could observe above, each value is stored using a different data type. It's quite important as you have to know which method you will choose to extract that data. I found one article that shows data types for all SRUM's tables: 
 - http://dfir.pro/index.php?link_id=92259,
 
+6. Calculates a percentage value based on the ChargeLevel and FullChargedCapacity. If both values equal zero, it means that batter was not connected.
+
+        if (ChargeLevel == 0 && FullChargedCapacity == 0)
+        {
+            float procent = 0;
+            stringbuilder.Append(Time.ToString("yyyy-MM-dd HH:mm:ss") + ",SRUM,,,[Battery Level] SRUM - Battery not detected%\r\n");
+            Data.Add(Tuple.Create(Time, procent));
+        }
+        else if (ChargeLevel == 0 && FullChargedCapacity != 0)
+        {
+            float procent = 0;
+            stringbuilder.Append(Time.ToString("yyyy-MM-dd HH:mm:ss") + ",SRUM,,,[Battery Level] SRUM - Power level: " + procent + "%\r\n");
+            Data.Add(Tuple.Create(Time, procent));
+        }
+
+        else
+        {
+            float procent = (ChargeLevel * 100 / FullChargedCapacity);
+            stringbuilder.Append(Time.ToString("yyyy-MM-dd HH:mm:ss") + ",SRUM,,,[Battery Level] SRUM - Power level: " + procent + "%\r\n");
+            Data.Add(Tuple.Create(Time, procent));
+        }
 
 # Timeline
 The timeline contains all entires extracted from the database. You can easily review them using BASH and simply GREP what you want to analyze.
