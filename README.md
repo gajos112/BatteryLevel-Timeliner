@@ -75,6 +75,7 @@ As you could observe above, each value is stored using a different data type. It
             stringbuilder.Append(Time.ToString("yyyy-MM-dd HH:mm:ss") + ",SRUM,,,[Battery Level] SRUM - Battery not detected%\r\n");
             Data.Add(Tuple.Create(Time, procent));
         }
+        
         else if (ChargeLevel == 0 && FullChargedCapacity != 0)
         {
             float procent = 0;
@@ -88,6 +89,8 @@ As you could observe above, each value is stored using a different data type. It
             stringbuilder.Append(Time.ToString("yyyy-MM-dd HH:mm:ss") + ",SRUM,,,[Battery Level] SRUM - Power level: " + procent + "%\r\n");
             Data.Add(Tuple.Create(Time, procent));
         }
+        
+7. Finally builds a CSV file and generates a graph.
 
 # Timeline
 The timeline contains all entires extracted from the database. You can easily review them using BASH and simply GREP what you want to analyze.
