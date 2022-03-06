@@ -31,4 +31,4 @@ To give you a quick overview of the database, I listed few useful (for DFIR anal
 # Timeline
 The timeline contains all entires extracted from the database. You can easily review them using BASH and simply GREP what you want to analyze.
 
-![alt text](https://github.com/gajos112/SRUM-Timeliner/blob/main/images/0.png?raw=true)
+![alt text](https://github.com/gajos112/BatteryLevel-Timeliner/blob/main/images/0.png?raw=true)
