@@ -1,6 +1,6 @@
 # BatteryPower-Timeliner
 
-BatteryPower Timeliner was designed and created for all DFIR analysts who want to use SRUM database to discover what was the battery level at the time of infection. There are few tools, that can extract that information from SRUDB.DAT, but in my opinion analysts do not understand what information are avaialbe in other tables than d {973F5D5C-1D90-4944-BE8E-24B94231A174} (network connections) and how that information can help during the investigation. 
+BatteryPower Timeliner was designed and created for all DFIR analysts who want to use SRUM database to find out what was the battery level at the time of infection. There are few tools that can extract that information from SRUDB.DAT, but in my opinion analysts do not understand what information are avaialbe in other tables than {973F5D5C-1D90-4944-BE8E-24B94231A174} (a very popular table, that stores information about network connections) and how that information can help during the investigation. 
 
 BatteryPower - Timeliner does two things:
 
